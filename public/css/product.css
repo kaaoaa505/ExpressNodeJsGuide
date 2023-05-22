@@ -1,0 +1,38 @@
+.product-form {
+  max-width: 100%;
+  width: 500px;
+  margin: auto;
+}
+
+.form-control label,
+.form-control input {
+  margin: 5px;
+  display: block;
+  width: 100%;
+}
+
+.form-control input {
+  border: 1px solid yellowgreen;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+button {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+}
+
+button:hover,
+button:active,
+button.active {
+  background-color: yellowgreen;
+  color: gray;
+  cursor: pointer;
+  font-weight: bolder;
+  text-shadow: 2px 2px white;
+}
