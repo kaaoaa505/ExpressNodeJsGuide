@@ -1,35 +1,20 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title #{pageTitle} 
-    link(rel="stylesheet", href="/css/main.css")
-    link(rel="stylesheet", href="/css/product.css")
-  body 
-    header.main-header 
-      nav.main-header__nav 
-        ul.main-header__list 
-          li.main-header__item 
-            a.active(href="/") Home 
-          li.main-header__item 
-            a.active(href="/admin/products/create") Add Product
-
-    main 
-      if products.length > 0
-        .grid
-          each product in products
-            article.card.product-item
-              header.card__header
-                h1.product__title #{product.title}
-              div.card__image
-                img(src="https://img.freepik.com/free-vector/opened-book-with-empty-pages_1308-78627.jpg", alt="", width="100")
-              div.card__content
-                h2.product__price $12.99
-                p.product__description just for test
-              div.card__actions
-                button.btn Add to cart
-      else 
-        .grid
-          div No products available.
+extends ../_layouts/main.pug
+block styles
+  link(rel="stylesheet", href="/css/product.css")
+block content 
+    if products.length > 0
+      .grid
+        each product in products
+          article.card.product-item
+            header.card__header
+              h1.product__title #{product.title}
+            div.card__image
+              img(src="https://img.freepik.com/free-vector/opened-book-with-empty-pages_1308-78627.jpg", alt="", width="100")
+            div.card__content
+              h2.product__price $12.99
+              p.product__description just for test
+            div.card__actions
+              button.btn Add to cart
+    else 
+      .grid
+        div No products available.
