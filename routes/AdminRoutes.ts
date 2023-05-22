@@ -6,6 +6,8 @@ import PathHelper from "../helpers/PathHelper";
 
 const AdminRoutes = express.Router();
 
+export let products: any = [];
+
 AdminRoutes.get("/products/create", (_req, res) => {
   res.sendFile(
     path.join(PathHelper.rootDir, "views", "admin", "product", "create.html")
@@ -13,10 +15,14 @@ AdminRoutes.get("/products/create", (_req, res) => {
 });
 
 AdminRoutes.post("/products", (req, res) => {
-  log(req.body);
   const { title } = req.body;
-  log(title);
+  products.push(title);
   res.redirect("/");
+});
+
+AdminRoutes.get("/products", (_req, res) => {
+  log(products);
+  res.send(products.toString());
 });
 
 export default AdminRoutes;

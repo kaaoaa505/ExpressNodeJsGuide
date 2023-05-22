@@ -5,7 +5,7 @@
 }
 
 .main-header {
-  background-color: yellowgreen;
+  background-color: green;
   height: 55px;
   width: 100%;
 }
@@ -36,5 +36,5 @@
 .main-header__item a:hover,
 .main-header__item a:active,
 .main-header__item a.active {
-  color: lightblue;
+  color: orange;
 }
