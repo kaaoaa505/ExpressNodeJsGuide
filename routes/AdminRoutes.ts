@@ -16,7 +16,7 @@ AdminRoutes.get("/products/create", (_req, res) => {
 
 AdminRoutes.post("/products", (req, res) => {
   const { title } = req.body;
-  products.push(title);
+  products.push({title});
   res.redirect("/");
 });
 
