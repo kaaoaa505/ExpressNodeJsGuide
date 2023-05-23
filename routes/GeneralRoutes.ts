@@ -1,19 +1,8 @@
 import express from "express";
-import path from "path";
-
-import PathHelper from "../helpers/PathHelper";
-import {products} from "./AdminRoutes";
+import GeneralController from "../controllers/GeneralController";
 
 const GeneralRoutes = express.Router();
 
-GeneralRoutes.get("/", (_req, res) => {
-  res.render('general/index', {
-    products,
-    pageTitle: 'Products List',
-    path: 'general.index',
-    formCss: false,
-    productCss: true
-  });
-});
+GeneralRoutes.get("/", GeneralController.home);
 
 export default GeneralRoutes;

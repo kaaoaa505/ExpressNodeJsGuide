@@ -1,10 +1,10 @@
 import express from "express";
-import { StatusCodes } from "http-status-codes";
 import path from "path";
 
 import PathHelper from "./helpers/PathHelper";
 import AdminRoutes from "./routes/AdminRoutes";
 import GeneralRoutes from "./routes/GeneralRoutes";
+import GeneralController from "./controllers/GeneralController";
 
 const app = express();
 
@@ -18,16 +18,6 @@ app.use(express.static(path.join(PathHelper.rootDir, "public")));
 
 app.use("/admin", AdminRoutes);
 app.use(GeneralRoutes);
-
-app.use((_req, res) => {
-  res
-    .status(StatusCodes.NOT_FOUND)
-    .render("404", {
-      pageTitle: "Not found",
-      path: 'not.found',
-      formCss: false,
-      productCss: false
-    });
-});
+app.use(GeneralController.notFound);
 
 app.listen(3000);
