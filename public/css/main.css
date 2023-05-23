@@ -4,8 +4,15 @@
   font-family: sans-serif;
 }
 
+h1.not-found{
+  color: darkred;
+  margin: 100px auto;
+  width: 100%;
+  text-align: center;
+}
+
 .main-header {
-  background-color: green;
+  background-color: cadetblue;
   height: 55px;
   width: 100%;
 }

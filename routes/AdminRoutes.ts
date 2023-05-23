@@ -9,9 +9,13 @@ const AdminRoutes = express.Router();
 export let products: any = [];
 
 AdminRoutes.get("/products/create", (_req, res) => {
-  res.sendFile(
-    path.join(PathHelper.rootDir, "views", "admin", "product", "create.html")
-  );
+  res.render('admin/products/create', {
+    products,
+    pageTitle: 'Create New Product',
+    path: 'admin.products.create',
+    formCss: true,
+    productCss: false
+  });
 });
 
 AdminRoutes.post("/products", (req, res) => {

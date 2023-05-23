@@ -1,3 +1,9 @@
+form.product-form {
+  max-width: 100%;
+  width: 500px;
+  margin: auto;
+}
+
 form .form-control label,
 form .form-control input {
   margin: 5px;
@@ -6,7 +12,7 @@ form .form-control input {
 }
 
 form .form-control input {
-  border: 1px solid green;
+  border: 1px solid cadetblue;
   border-radius: 5px;
   padding: 5px;
 }
@@ -16,17 +22,16 @@ form button {
   border-radius: 5px;
   padding: 5px;
   margin: 5px;
-  background-color: white;
+  background-color: lightgray;
   color: black;
-  font-weight: bold;
 }
 
 form button:hover,
 form button:active,
 form button.active {
-  background-color: green;
-  color: gray;
+  background-color: gray;
+  color: whitesmoke;
   cursor: pointer;
   font-weight: bolder;
-  text-shadow: 2px 2px white;
+  text-shadow: 1px 1px black;
 }

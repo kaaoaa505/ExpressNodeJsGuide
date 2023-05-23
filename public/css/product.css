@@ -1,5 +1,43 @@
-.product-form {
-  max-width: 100%;
-  width: 500px;
+article.card.product-item {
+  width: 200px;
+  border: 1px solid lightgray;
+  float: left;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+article.card.product-item > header,
+article.card.product-item > div.card__content,
+article.card.product-item > div.card__actions {
+  width: 150px;
   margin: auto;
+  text-align: center;
+  color: gray;
+}
+
+article.card.product-item img {
+  width: 190px;
+  background-color: gray;
+  padding: 0 5px;
+  float: left;
+}
+
+article.card.product-item > div.card__actions button.btn {
+  background: white;
+  color: cadetblue;
+  padding: 5px;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 10px auto;
+}
+
+article.no-product-found h1 {
+  margin-top: 100px;
+  text-align: center;
+}
+
+article.no-product-found h1 span {
+  margin: auto;
+  color: darkred;
 }
